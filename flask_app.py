@@ -48,7 +48,7 @@ def automatic_prediction():
 # Define a route for the home page
 @app.route('/')
 def home():
-    return render_template('firstpage.html')
+    return render_template('index.html')
 
 # Define a route for the manual prediction page
 @app.route('/manual-prediction')
