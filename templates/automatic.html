@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .prediction-result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Prediction using Tensorflow</h1>
+        <form method="GET" action="/automatic-prediction">
+            <label for="week-number">Enter Week Number:</label>
+            <br>
+            <input type="number" id="week-number" name="weekNumber" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if prediction %}
+            <div class="prediction-result">
+                <h3>Prediction Result:</h3>
+                <p>{{ prediction }}</p>
+            </div>
+        {% endif %}
+        <a class="back-link" href="/">Go Back to First Page</a>
+    </div>
+</body>
+</html>

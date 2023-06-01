@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 1000px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .image-name {
+        font-weight: bold;
+    }
+
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Visualization</h1>
+        <form method="POST" action="/image-visualization">
+            <label for="week-number">Enter Week Number:</label>
+            <br>
+            <input type="number" id="week-number" name="weekNumber" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="image-container">
+            {% if image_path %}
+                <img src="{{ image_path }}" alt="Week Image">
+                <div class="image-name">"Week {{week_number}}"</div>
+            {% endif %}
+        </div>
+        <a class="back-link" href="/">Go Back to First Page</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Model Deployment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mannual Prediction using Transformers</h1>
+        <form action="/predict" method="POST">
+            <label for="input1">Input 1:</label>
+            <input type="number" name="input1" id="input1" required>
+            <label for="input2">Input 2:</label>
+            <input type="number" name="input2" id="input2" required>
+            <label for="input3">Input 3:</label>
+            <input type="number" name="input3" id="input3" required>
+            <label for="input4">Input 4:</label>
+            <input type="number" name="input4" id="input4" required>
+            <label for="input5">Input 5:</label>
+            <input type="number" name="input5" id="input5" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
