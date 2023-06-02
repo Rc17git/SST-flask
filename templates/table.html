@@ -28,7 +28,10 @@
     <h1>Temperature Data Table</h1>
     <table>
         <thead>
-            <tr>
+            <tr>  
+                <th>Day</th>
+                <th>Month</th>
+                <th>Year</th>
                 <th>Week</th>
                 <th>SST</th>
             </tr>
@@ -36,6 +39,9 @@
         <tbody>
             {% for row in temperature_data %}
             <tr>
+                <td>{{ row.day }}</td>
+                <td>{{ row.month }}</td>
+                <td>{{ row.year}}</td>
                 <td>{{ row.week }}</td>
                 <td>{{ row.SST }}</td>
             </tr>
